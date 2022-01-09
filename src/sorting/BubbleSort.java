@@ -8,7 +8,13 @@ public class BubbleSort {
         for (int i = 0; i < n ; i++) {
             noSwapFlag=true;
             for (int j = 0; j < n-i-1; j++) {
-                if (A[j] > A[j + 1]) {
+              /*  if (A[j] > A[j + 1]) {
+                    noSwapFlag=false;
+                    tmp = A[j + 1];
+                    A[j + 1] = A[j];
+                    A[j] = tmp; }
+            }*/
+                if (A[j] < A[j + 1]) {
                     noSwapFlag=false;
                     tmp = A[j + 1];
                     A[j + 1] = A[j];
