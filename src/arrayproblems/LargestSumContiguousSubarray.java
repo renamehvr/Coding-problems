@@ -16,10 +16,7 @@ public class LargestSumContiguousSubarray {
             int tempSum=input[i];
             for (int j = i+1; j < input.length ; j++) {
                 tempSum+=input[j];
-
-                if (maxSum<tempSum){
-                    maxSum=tempSum;
-                }
+               maxSum= Math.max(maxSum,tempSum);
             }
         }
         }
