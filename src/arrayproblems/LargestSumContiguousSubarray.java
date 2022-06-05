@@ -3,19 +3,19 @@ package arrayproblems;
 public class LargestSumContiguousSubarray {
 
     public static void main(String[] args) {
-        int[] input= {1 , -1, 2, -1 ,5};
+        int[] A = {1 , 2 , 3, 4 ,-10};
         int maxSum=0;
-        for (int i = 0; i < input.length; i++) {
-        if(maxSum<input[i]){
-            maxSum=input[i];
+        for (int i = 0; i < A.length; i++) {
+        if(maxSum< A[i]){
+            maxSum= A[i];
         }
-        if(i== input.length-1){
+        if(i== A.length-1){
             break;
         }
         else {
-            int tempSum=input[i];
-            for (int j = i+1; j < input.length ; j++) {
-                tempSum+=input[j];
+            int tempSum= A[i];
+            for (int j = i+1; j < A.length ; j++) {
+                tempSum+= A[j];
                maxSum= Math.max(maxSum,tempSum);
             }
         }
